@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Environment variables
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Mac / Linux system files
+.DS_Store
+Thumbs.db
+
+# Streamlit specific
+.streamlit/
+
+# Logs
+*.log
+
+# Build / dist
+build/
+dist/
+*.egg-info/

@@ -7,6 +7,14 @@ import base64
 from utils.image_processing import preprocess_image
 from utils.gemini_api import analyze_injury, generate_first_aid, get_chatbot_response
 from utils.location_services import find_nearby_hospitals
+from dotenv import load_dotenv
+# import os
+
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
+
+# import streamlit as st
+# st.write("Gemini API Key Loaded:", bool(api_key))
 
 # Set page configuration
 st.set_page_config(
@@ -152,6 +160,8 @@ with tab1:
             
             # Analyze the injury using Gemini API
             analysis_result = analyze_injury(preprocessed_img)
+            # st.write("Gemini Raw Response (Injury Analysis):", analysis_result)
+
             st.session_state.analysis_result = analysis_result
             
             # Generate severity score (1-10)
@@ -441,7 +451,8 @@ with tab3:
             try:
                 # Get the actual response
                 response = get_chatbot_response(prompt)
-                
+                st.write("Gemini Raw Response (Chat):", response)
+
                 # Display response with typing effect
                 full_response = ""
                 for chunk in response.split():

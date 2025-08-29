@@ -3,7 +3,7 @@ Configuration settings for the Aidly application.
 """
 
 # API Keys and Secrets
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_API_KEY = os.getenv("AIzaSyBeMoD6iAvbd0UPAwUTWN53sxsbRtrOJFM", "")
 
 # Application Settings
 APP_NAME = "Aidly"
